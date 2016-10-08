@@ -1,0 +1,18 @@
+ {% extends 'emp_student_base_view.html.twig' %}
+
+
+ {% block bodyextend %}
+
+ <div class="col-md-12 panel-success">
+  <div class="content-box-header panel-heading">
+    <div class="panel-title ">Employed Student CV</div>
+
+     
+  </div>
+  <div class="content-box-large box-with-header">
+     <div> {{ student_data|raw }} </div>
+    <br /><br />
+  </div>
+</div>
+ 
+{% endblock %}           

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+     {% block body %}
+ 
+    <div class="page-content">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                     <li><a>UNEMPLOYED STUDENT DASHBOARD</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/view_all_comments"><i class="glyphicon glyphicon-home"></i> View all comments by Lecturer</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/view_all_jobs"><i class="glyphicon glyphicon-home"></i> View all jobs</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/update_cv"><i class="glyphicon glyphicon-home"></i> Update CV</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/upload_picture"><i class="glyphicon glyphicon-home"></i> upload Picture</a></li>
+                    <li>&nbsp;</li>
+                </ul>
+             </div>
+          </div>
+          <div class="col-md-9">
+            <div class="row">
+                  {% block bodyextend %}
+
+                   {% endblock %}
+            </div> 
+          </div>
+        </div>
+    </div>
+
+  {% endblock %}

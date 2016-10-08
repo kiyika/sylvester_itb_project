@@ -1,0 +1,29 @@
+ {% extends 'lecturer_base_view.html.twig' %}
+
+ {% block bodyextend %}
+
+ <div class="col-md-12 panel-success">
+  <div class="content-box-header panel-heading">
+    <div class="panel-title ">Add new Job Description</div>
+
+     
+  </div>
+  <div class="content-box-large box-with-header">
+        <div >
+            {{form_start(db_jobs_from)}}
+            Enter New Job Title Below:
+             {{ form_row(db_jobs_from.dbName) }}
+             Enter New Job Details Below:
+             {{ form_row(db_jobs_from.dbDetail) }}
+             Enter New JOb Deadline Below:
+             {{ form_row(db_jobs_from.dbDeadline) }}
+            {{form_end(db_jobs_from)}}
+       </div>
+  </div>
+    <br /><br />
+  </div>
+</div>
+
+<style type="text/css">label{display: none;}</style>
+ 
+{% endblock %}        

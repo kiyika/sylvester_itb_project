@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+     {% block body %}
+ 
+    <div class="page-content">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li><a>LECTURER DASHBOARD</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/unemp_students"><i class="glyphicon glyphicon-home"></i> View All Un-Employed Students</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/emp_students"><i class="glyphicon glyphicon-home"></i> View All Employed Students</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/comments_student_cv"><i class="glyphicon glyphicon-home"></i> Comment to all students CV</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/comments_student_cv_specific"><i class="glyphicon glyphicon-home"></i> Comment to a specific student CV</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/add_new_student"><i class="glyphicon glyphicon-home"></i> Add New Student</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/add_new_job"><i class="glyphicon glyphicon-home"></i> Add New job Desciption</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/add_new_employer"><i class="glyphicon glyphicon-home"></i> Add New Employer</a>
+                    <li>&nbsp;</li>
+                </ul>
+             </div>
+          </div>
+          <div class="col-md-9">
+            <div class="row">
+                  {% block bodyextend %}
+
+                   {% endblock %}
+            </div> 
+          </div>
+        </div>
+    </div>
+
+  {% endblock %}

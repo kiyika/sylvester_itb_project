@@ -1,0 +1,21 @@
+ {% extends 'emp_student_base_view.html.twig' %}
+
+
+ {% block bodyextend %}
+
+ <div class="col-md-12 panel-success">
+  <div class="content-box-header panel-heading">
+    <div class="panel-title ">Job Details</div>
+
+     
+  </div>
+  <div class="content-box-large box-with-header">
+    <label>Job Title </label>
+     <div><p> {{ student_job_title|raw }} </p></div>
+    <label>Job Details </label>
+     <div><p> {{ student_job_detail|raw }} </p></div>
+    <br /><br />
+  </div>
+</div>
+ 
+{% endblock %}           

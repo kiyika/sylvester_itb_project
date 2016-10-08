@@ -1,0 +1,39 @@
+ {% extends 'unemp_student_base_view.html.twig' %}
+
+ {% block bodyextend %}
+
+ <div class="col-md-12 panel-success">
+  <div class="content-box-header panel-heading">
+    <div class="panel-title ">View All Comments by Lecturer</div>
+
+     
+  </div>
+  <div class="content-box-large box-with-header">
+        <div >
+			<div class="table-responsive">
+	            <table class="table table-striped table-bordered table-hover">
+	              <thead>
+	                <tr>
+	                  <th>Comment</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                {% for key,value in all_comments %}
+	                <tr>
+	                <td> {{ value }} </td>
+	                </tr>
+	                {% endfor %}
+	              </tbody>
+	            </table>
+	          </div>
+        	 
+            
+       </div>
+  </div>
+    <br /><br />
+  </div>
+</div>
+
+<style type="text/css">label{display: none;}</style>
+ 
+{% endblock %}        

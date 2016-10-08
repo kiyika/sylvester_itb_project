@@ -1,0 +1,26 @@
+ {% extends 'unemp_student_base_view.html.twig' %}
+
+ {% block bodyextend %}
+
+ <div class="col-md-12 panel-success">
+  <div class="content-box-header panel-heading">
+    <div class="panel-title ">Upload Picture</div>
+
+     
+  </div>
+  <div class="content-box-large box-with-header">
+        <div >
+        	<img src="{{ app.request.getSchemeAndHttpHost() }}/students_images/{{ student_image }}.jpg" width="400">
+            {{form_start(db_students_from)}}
+            Upload Picture:
+             {{ form_row(db_students_from.dbImage) }} 
+            {{form_end(db_students_from)}}
+       </div>
+  </div>
+    <br /><br />
+  </div>
+</div>
+
+<style type="text/css">label{display: none;}</style>
+ 
+{% endblock %}        

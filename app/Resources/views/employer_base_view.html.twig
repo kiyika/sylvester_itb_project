@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+     {% block body %}
+ 
+    <div class="page-content">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                     <li><a>EMPLOYER DASHBOARD</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/applied_applicants"><i class="glyphicon glyphicon-home"></i> Applied Applicants</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/add_new_job_employer"><i class="glyphicon glyphicon-home"></i> Create New Job</a></li>
+                    <li>&nbsp;</li>
+                </ul>
+             </div>
+          </div>
+          <div class="col-md-9">
+            <div class="row">
+                  {% block bodyextend %}
+
+                   {% endblock %}
+            </div> 
+          </div>
+        </div>
+    </div>
+
+  {% endblock %}

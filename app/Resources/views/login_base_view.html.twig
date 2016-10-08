@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+     {% block body %}
+ 
+    <div class="page-content">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}"><i class="glyphicon glyphicon-home"></i> Lecturer Login</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/student_login"><i class="glyphicon glyphicon-home"></i> Student Login</a></li>
+                    <li><a href="{{ app.request.getSchemeAndHttpHost() }}/employer_login"><i class="glyphicon glyphicon-home"></i> Employer Login</a></li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                </ul>
+             </div>
+          </div>
+          <div class="col-md-10">
+            <div class="row">
+              
+             
+                  {% block extendbody %}
+                  {% endblock %}
+                 
+            </div> 
+          </div>
+        </div>
+    </div>
+<style type="text/css">label{display: none;}</style>
+ 
+  {% endblock %}

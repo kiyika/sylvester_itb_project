@@ -1,0 +1,38 @@
+ {% extends 'lecturer_base_view.html.twig' %}
+
+ {% block bodyextend %}
+
+ <div class="col-md-12 panel-success">
+  <div class="content-box-header panel-heading">
+    <div class="panel-title ">Unemployed Students List</div>
+
+     
+  </div>
+  <div class="content-box-large box-with-header">
+     <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Image</th>
+                  <th>CV</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for count,student_data in students_data %}
+                <tr>
+                <td> {{ student_data['name'] }} </td>
+                <td> {{ student_data['email'] }} </td>
+                <td><img width="120px" src="{{ app.request.getSchemeAndHttpHost() }}/students_images/{{ student_data['img'] }}.jpg">  </td>
+                <td> <a href="{{ app.request.getSchemeAndHttpHost() }}/cv_student_view/{{ student_data['id'] }}">View CV</a></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+    <br /><br />
+  </div>
+</div>
+ 
+{% endblock %}        

@@ -1,0 +1,50 @@
+ {% extends 'employer_base_view.html.twig' %}
+
+ {% block bodyextend %}
+
+ <div class="col-md-12 panel-success">
+  <div class="content-box-header panel-heading">
+    <div class="panel-title ">Employed Student CV</div>
+
+	<button id="cmd" class="btn">Download CV in PDF</button>
+     
+  </div>
+  <div class="content-box-large box-with-header">
+     <div  id="content" >  {{ student_data|raw }} </div>
+    <br /><br />
+	<div id="editor"></div>
+  </div>
+</div>
+
+
+ 
+
+
+{% endblock %}        
+
+
+
+  {% block js %}
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+		 <script type="text/javascript">
+		 	$(document).ready(function(){
+			    console.log( "ready!" );
+		 	var doc = new jsPDF();
+		 	var specialElementHandlers = {
+		 		'#editor': function (element, renderer) {
+		 			return true;
+		 		}
+		 	};
+
+		 	$('#cmd').click(function () {
+		 		doc.fromHTML($('#content').html(), 15, 15, {
+		 			'width': 170,
+		 			'elementHandlers': specialElementHandlers
+		 		});
+		 		doc.save('student-cv.pdf');
+		 	});
+			});
+
+		 </script>
+    {% endblock %}
+

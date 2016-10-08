@@ -1,0 +1,27 @@
+ {% extends 'lecturer_base_view.html.twig' %}
+
+ {% block bodyextend %}
+
+ <div class="col-md-12 panel-success">
+  <div class="content-box-header panel-heading">
+    <div class="panel-title ">Comments to Students CV</div>
+
+     
+  </div>
+  <div class="content-box-large box-with-header">
+        <div >
+            {{form_start(db_comments_from)}}
+              Enter Comment Below:
+             {{ form_row(db_comments_from.dbText) }}
+            {{form_end(db_comments_from)}}
+       </div>
+  </div>
+    <br /><br />
+  </div>
+</div>
+ <style type="text/css">
+   label {
+    display:none;
+  }
+ </style>
+{% endblock %}        
