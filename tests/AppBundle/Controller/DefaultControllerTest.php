@@ -24,10 +24,4 @@ class DefaultControllerTest extends WebTestCase
         $testing->request('GET', '/employer_login');
         $this->assertTrue($testing->getResponse()->isSuccessful());
     }
-    public function testSign_out()
-    {
-        $testing = self::createClient();
-        $testing->request('GET', '/sign_out');
-        $this->assertTrue($testing->getResponse()->isSuccessful());
-    }
 }
